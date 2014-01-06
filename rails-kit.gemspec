@@ -1,10 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rails_kit/version'
+require 'rails-kit/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "rails_kit"
+  spec.name          = "rails-kit"
   spec.version       = RailsKit::VERSION
   spec.authors       = ["WM Chang"]
   spec.email         = ["wandererm@gmail.com"]
@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency 'kss-rails'
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
 end
